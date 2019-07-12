@@ -1,10 +1,10 @@
 import React from "react";
 import { useStore } from "outstated";
 
-import todo from "./stores/todo";
+import useTodo from "./stores/useTodo";
 
 function LastUpdated() {
-  const { lastUpdated } = useStore(todo);
+  const { lastUpdated } = useStore(useTodo);
   return (<div>{lastUpdated && 
     lastUpdated.format("YYYY-MM-DD hh:mm:ss")
     }

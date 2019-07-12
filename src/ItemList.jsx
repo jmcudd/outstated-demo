@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useStore } from "outstated";
 
-import todo from "./stores/todo";
+import useTodo from "./stores/useTodo";
 
 function ItemList() {
-  const { list, removeItem, updateItem } = useStore(todo);
+  const { list, removeItem, updateItem } = useStore(useTodo);
   return (
     <div>
       {list &&

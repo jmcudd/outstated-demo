@@ -2,10 +2,10 @@ import React from 'react';
 import {useStore} from 'outstated';
 
 
-import todo from "./stores/todo";
+import useTodo from "./stores/useTodo";
 
 function ListCount(){
-  const {list} = useStore(todo);
+  const {list} = useStore(useTodo);
   return(<div>Items: {list.length}</div>);
 }
 

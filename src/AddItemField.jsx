@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useStore } from "outstated";
 
-import todo from "./stores/todo";
+import useTodo from "./stores/useTodo";
 
 function AddItemField(){
-  const { addItem } = useStore(todo);
+  const { addItem } = useStore(useTodo);
   const [description, setDescription] = useState("");
   return(<div>
       <input

@@ -2,8 +2,7 @@ import { useState } from "react";
 import uuidv4 from "uuid/v4";
 import moment from "moment";
 
-function todo() {
-  /* eslint react-hooks/rules-of-hooks: 0 */
+function useTodo() {
   const [lastUpdated, setLastUpdated] = useState(moment("2019-07-12 05:31:18"));
   const [list, setList] = useState([
     { id: "1", description: "Take out the trash" },
@@ -40,4 +39,4 @@ function todo() {
   return { list, addItem, updateItem, removeItem, lastUpdated };
 }
 
-export default todo;
+export default useTodo;
