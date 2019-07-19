@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStore } from "outstated";
 
 import useTodo from "./stores/useTodo";
@@ -11,14 +11,27 @@ function ItemList() {
         list.map((item, i) => {
           return (
             <div key={i}>
-              <input
-                type="text"
-                value={item.description}
-                onChange={e => {
-                  updateItem({ ...item, description: e.target.value });
-                }}
-              />
-              <button onClick={() => removeItem(item)}>Remove</button>
+              {!item.completed && (
+                <>
+                  <input
+                    type="text"
+                    value={item.description}
+                    onChange={e => {
+                      updateItem({ ...item, description: e.target.value });
+                    }}
+                  />
+                  <button onClick={() => removeItem(item)}>Remove</button>
+                </>
+              )}
+              {item.completed && (
+                <>
+                  <span
+                    style={{
+                      textDecoration: "line-through"
+                    }}
+                  >{`${item.description} `}</span>
+               </>
+              )}
             </div>
           );
         })}
