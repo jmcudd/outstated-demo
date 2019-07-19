@@ -1,2 +1,2 @@
 
-A very basic example usage of outstated
+A very basic example usage of [outstated](https://github.com/yamalight/outstated)
